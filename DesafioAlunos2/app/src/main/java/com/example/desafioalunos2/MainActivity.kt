@@ -48,7 +48,7 @@ class MainActivity : ComponentActivity() {
 }
 
 // Modelo de dados que será passado entre as telas.
-data class Bicho(val nome: String, val especie: String, val classe: String, val level: String)
+data class Bicho(val nome: String, val especie: String, val classe: String, val level: Int)
 
 // Passo 1: Configurar o NavHost e NavController
 @Composable
@@ -85,9 +85,9 @@ fun AppNavigation() {
 fun Tela1(navController: NavController) {
     // Cria uma lista estática de bichos.
     val bicho = listOf(
-        Bicho("João", "Elfo", classe = "Arqueiro", level = "36"),
-        Bicho("Maria", "Bruxa", classe = "Maga", level = "71"),
-        Bicho("Carlos", "Rato", classe = "Observador", level = "483")
+        Bicho("João", "Elfo", classe = "Arqueiro", level = 36),
+        Bicho("Maria", "Bruxa", classe = "Maga", level = 71),
+        Bicho("Carlos", "Rato", classe = "Observador", level = 483)
     )
 
     // LazyColumn exibe a lista de forma eficiente.
